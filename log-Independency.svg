@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="573" viewBox="0 0 573 573" width="573">
+  <defs>
+    <style>.a{stroke:gray;stroke-miterlimit:10;stroke-width:23px;fill:url(#a);}.b{fill:url(#b);}</style>
+    <linearGradient gradientUnits="userSpaceOnUse" id="a" x1="286.5" x2="286.5" y1="11.5" y2="561.5">
+      <stop offset="0" stop-color="#a7a9ac"/>
+      <stop offset="0.03" stop-color="#adafb2"/>
+      <stop offset="0.19" stop-color="#cbccce"/>
+      <stop offset="0.36" stop-color="#e2e3e4"/>
+      <stop offset="0.54" stop-color="#f2f3f3"/>
+      <stop offset="0.74" stop-color="#fcfcfc"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" id="b" x1="286.5" x2="286.5" y1="46.5" y2="526.5">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.31" stop-color="#fcfcfc"/>
+      <stop offset="0.52" stop-color="#f3f3f3"/>
+      <stop offset="0.69" stop-color="#e4e4e4"/>
+      <stop offset="0.85" stop-color="#cfcfcf"/>
+      <stop offset="0.99" stop-color="#b4b4b4"/>
+      <stop offset="1" stop-color="#b3b3b3"/>
+    </linearGradient>
+  </defs>
+  <rect class="a" height="550" rx="80" width="550" x="11.5" y="11.5"/>
+  <rect class="b" height="480" rx="50" width="480" x="46.5" y="46.5"/>
+  <text x="-13.5" y="-13.5"/>
+  <path d="M305.78,166.34A125,125,0,1,1,217.39,203a124.18,124.18,0,0,1,88.39-36.61m0-20a145,145,0,1,0,145,145,145,145,0,0,0-145-145Z" transform="translate(-13.5 -13.5)"/>
+  <path d="M261.46,244.42V225.87h88.65v18.55Zm0,120.12V346h88.65v18.55Zm33.55,0V225.87h21.34V364.54Z" transform="translate(-13.5 -13.5)"/>
+</svg>
