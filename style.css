@@ -56,15 +56,15 @@ header {
 
 .warraper-secton1 {
     width: 100%;
-    height: 400px;
+    height: 300px;
     background-image: url(/img-capa.png);
+    background-size: cover;
 }
 
 /* Animation controles*/
 
 #img-log {
-    width: 50px;
-    filter: grayscale(50%) blur(1px);
+    width: 30px;
 }
 
 .scroller {
