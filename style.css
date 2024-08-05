@@ -62,7 +62,8 @@ header {
 }
 
 #img-capa {
-    width: 100%;
+    width: 100vh;
+    height: 60vh;
 }
 
 /* Animation controles*/
