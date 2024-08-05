@@ -61,6 +61,10 @@ header {
     background-size: cover;*/
 }
 
+#img-capa {
+    width: 100%;
+}
+
 /* Animation controles*/
 
 #img-log {
