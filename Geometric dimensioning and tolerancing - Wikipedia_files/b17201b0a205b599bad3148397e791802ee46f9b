@@ -1,0 +1,18 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.621ex" height="2.843ex" style="vertical-align: -0.838ex;" viewBox="0 -863.1 2420 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">{\displaystyle {\displaystyle \Box }\!\!\!\!{\scriptstyle {\mathsf {A}}}\!-\!\!\!-\!\!\!\blacktriangleleft \!\!\!|}</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJAMS-25A1" d="M71 0Q59 4 55 16V346L56 676Q64 686 70 689H709Q719 681 722 674V15Q719 10 709 1L390 0H71ZM682 40V649H95V40H682Z"></path>
+<path stroke-width="1" id="E1-MJSS-41" d="M183 181Q183 179 152 91T118 0H28L154 346L280 693Q281 694 333 694H385L511 349Q636 4 638 2Q638 0 584 0H530L464 183H184L183 181ZM324 606Q319 578 292 492T238 332T210 256Q210 254 324 254T438 255L429 281L419 308Q409 336 395 378T365 465T339 551T324 611V606Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path>
+<path stroke-width="1" id="E1-MJAMS-25C0" d="M694 -26Q686 -40 676 -41H670L382 95Q92 232 90 234Q83 239 83 249Q83 262 96 267Q101 270 379 401T665 537Q671 539 674 539Q686 539 694 524V-26Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-7C" d="M139 -249H137Q125 -249 119 -235V251L120 737Q130 750 139 750Q152 750 159 735V-235Q151 -249 141 -249H139Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJAMS-25A1" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJSS-41" x="158" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-2212" x="639" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-2212" x="1140" y="0"></use>
+ <use xlink:href="#E1-MJAMS-25C0" x="1640" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-7C" x="2141" y="0"></use>
+</g>
+</svg>
