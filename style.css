@@ -64,8 +64,8 @@ header {
 
 #img-capa {
     width: 100%;
-    opacity: 200%;
-
+    height: 300px;
+    background-size: cover;
 }
 
 /* Animation controles*/
