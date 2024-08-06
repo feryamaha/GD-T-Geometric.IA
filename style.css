@@ -83,6 +83,7 @@ header {
     cursor: pointer;
     transform: scale(1.6);
     background-color: #000;
+    z-index: 1;
 }
 
 .scroller {
