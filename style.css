@@ -141,6 +141,11 @@ header {
     .warraper-menu-header {
         gap: 3%;
     }
+
+    .others-content {
+        border-bottom: none;
+        border-right: none;
+    }
 }
 
 @media (max-width: 1024px) {
