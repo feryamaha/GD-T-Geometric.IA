@@ -213,3 +213,7 @@ header {
         width: 100px;
     }
 }
+
+#link-control {
+    text-decoration: none;
+}
