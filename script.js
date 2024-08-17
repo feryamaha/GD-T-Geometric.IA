@@ -1,43 +1,76 @@
-//Animation skills
-const scrollers = document.querySelectorAll(".scroller");
+//Acess the Images
+let slideImages = document.querySelectorAll('img');
+//Acess the next and prev buttons
+let next = document.querySelectorAll('.next');
+let prev = document.querySelectorAll('.prev');
+//Acess the indicators
+let dots = document.querySelectorAll('.dot');
 
-// If a user hasn't opted in for recuded motion, then we add the animation
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
+var counter = 0;
+
+//Code for next button 
+next.addEventListener('click', slideNext);
+function slideNext() {
+    slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+    if (counter >= slideImages.length - 1) {
+        counter = 0;
+    }
+    else {
+        counter++;
+    }
+    slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+    indicators()
 }
 
-function addAnimation() {
-    scrollers.forEach((scroller) => {
-        // add data-animated="true" to every `.scroller` on the page
-        scroller.setAttribute("data-animated", true);
-
-        // Make an array from the elements within `.scroller-inner`
-        const scrollerInner = scroller.querySelector(".scroller__inner");
-        const scrollerContent = Array.from(scrollerInner.children);
-
-        // For each item in the array, clone it
-        // add aria-hidden to it
-        // add it into the `.scroller-inner`
-        scrollerContent.forEach((item) => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            scrollerInner.appendChild(duplicatedItem);
-        });
-    });
-}
-
-let count = 1;
-document.getElementById("radio1").checked = true
-
-setInterval(function () {
-    nextImage()
-}, 5000)
-
-function nextImage() {
-    count++;
-    if (count > 6) {
-        count = 1;
+//Code for prev button 
+prev.addEventListener('click, slidePrev');
+function slidePrev() {
+    slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+    if (counter == 0) {
+        counter = slideImages.lenght - 1
+    }
+    else {
+        counter--;
     }
 
-    document.getElementById("radio" + count).checked = true
+    slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+    indicators()
 }
+autoSliding();
+
+	// Stop auto sliding when mouse is over
+	const container = document.querySelector('.slide-container');
+	container.addEventListener('mouseover', function(){
+		clearInterval(deletInterval);
+	});
+
+	// Resume sliding when mouse is out
+	container.addEventListener('mouseout', autoSliding);
+
+	// Add and remove active class from the indicators
+	function indicators(){
+		for(i = 0; i < dots.length; i++){
+			dots[i].className = dots[i].className.replace(' active', '');
+		}
+		dots[counter].className += ' active';
+	}
+
+	// Add click event to the indicator
+	function switchImage(currentImage){
+		currentImage.classList.add('active');
+		var imageId = currentImage.getAttribute('attr');
+		if(imageId > counter){
+		slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+		counter = imageId;
+		slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+		}
+		else if(imageId == counter){
+			return;
+		}
+		else{
+		slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+		counter = imageId;
+		slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';	
+		}
+		indicators();
+	}
