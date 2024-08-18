@@ -1,76 +1,78 @@
-//Acess the Images
-let slideImages = document.querySelectorAll('img');
-//Acess the next and prev buttons
-let next = document.querySelectorAll('.next');
-let prev = document.querySelectorAll('.prev');
-//Acess the indicators
+
+// Access the Images
+let slideImages = document.querySelectorAll('.slides img');
+// Access the next and prev buttons
+let next = document.querySelector('.next');
+let prev = document.querySelector('.prev');
+// Access the indicators
 let dots = document.querySelectorAll('.dot');
 
-var counter = 0;
+let counter = 0;
+let interval;
 
-//Code for next button 
-next.addEventListener('click', slideNext);
+// Function to show the next slide
 function slideNext() {
     slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-    if (counter >= slideImages.length - 1) {
-        counter = 0;
-    }
-    else {
-        counter++;
-    }
+    counter = (counter + 1) % slideImages.length;
     slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-    indicators()
+    indicators();
 }
 
-//Code for prev button 
-prev.addEventListener('click, slidePrev');
+// Function to show the previous slide
 function slidePrev() {
     slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
-    if (counter == 0) {
-        counter = slideImages.lenght - 1
-    }
-    else {
-        counter--;
-    }
-
+    counter = (counter - 1 + slideImages.length) % slideImages.length;
     slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
-    indicators()
+    indicators();
 }
+
+// Function to update the indicators
+function indicators() {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[counter].classList.add('active');
+}
+
+// Function to start the auto sliding
+function autoSliding() {
+    interval = setInterval(slideNext, 3000);
+}
+
+// Function to stop the auto sliding
+function stopSliding() {
+    clearInterval(interval);
+}
+
+// Event listeners for next and prev buttons
+next.addEventListener('click', () => {
+    stopSliding();
+    slideNext();
+    autoSliding();
+});
+
+prev.addEventListener('click', () => {
+    stopSliding();
+    slidePrev();
+    autoSliding();
+});
+
+// Event listeners to stop and resume auto sliding on mouse over/out
+const container = document.querySelector('.slide-container');
+container.addEventListener('mouseover', stopSliding);
+container.addEventListener('mouseout', autoSliding);
+
+// Function to switch image based on indicator click
+function switchImage(currentImage) {
+    stopSliding();
+    let imageId = parseInt(currentImage.getAttribute('attr'));
+    if (imageId !== counter) {
+        slideImages[counter].style.animation = imageId > counter ? 'next1 0.5s ease-in forwards' : 'prev1 0.5s ease-in forwards';
+        counter = imageId;
+        slideImages[counter].style.animation = imageId > counter ? 'next2 0.5s ease-in forwards' : 'prev2 0.5s ease-in forwards';
+        indicators();
+    }
+    autoSliding();
+}
+
+// Initialize the slideshow
 autoSliding();
 
-	// Stop auto sliding when mouse is over
-	const container = document.querySelector('.slide-container');
-	container.addEventListener('mouseover', function(){
-		clearInterval(deletInterval);
-	});
-
-	// Resume sliding when mouse is out
-	container.addEventListener('mouseout', autoSliding);
-
-	// Add and remove active class from the indicators
-	function indicators(){
-		for(i = 0; i < dots.length; i++){
-			dots[i].className = dots[i].className.replace(' active', '');
-		}
-		dots[counter].className += ' active';
-	}
-
-	// Add click event to the indicator
-	function switchImage(currentImage){
-		currentImage.classList.add('active');
-		var imageId = currentImage.getAttribute('attr');
-		if(imageId > counter){
-		slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-		counter = imageId;
-		slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-		}
-		else if(imageId == counter){
-			return;
-		}
-		else{
-		slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
-		counter = imageId;
-		slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';	
-		}
-		indicators();
-	}

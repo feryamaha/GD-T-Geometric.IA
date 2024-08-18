@@ -33,16 +33,16 @@
         </div> -->
 
         <!-- slider show INICIO-->
-        <section id="section-banner">
+        <section class="section-banner">
             <div class="slide-container">
+
                 <div class="slides">
-                    <img src="img-capa-fullstack.png" alt="img-banner"
-                        class="active">
-                    <img src="img-capa-forma3d.png" alt="img-banner">
-                    <img src="img-capa-girotto.png" alt="img-banner">
-                    <img src="img-capa-mitutoyo.png" alt="img-banner">
-                    <img src="img-capa-owna.png" alt="img-banner">
-                    <img src="img-capa-propaganda.png" alt="img-banner">
+                    <img src="img-capa_geometric.IA.png" class="active">
+                    <img src="img-capa-fullstack.png">
+                    <img src="img-capa-forma3d.png">
+                    <img src="img-capa-girotto.png">
+                    <img src="img-capa-mitutoyo.png">
+                    <img src="img-capa-owna.png">
                 </div>
 
                 <div class="buttons">
@@ -51,14 +51,15 @@
                 </div>
 
                 <div class="dotsContainer">
-                    <div class="dot active" attr="0"  onclick="switchImage(this)"></div>
-                    <div class="dot active" attr="1"  onclick="switchImage(this)"></div>
-                    <div class="dot active" attr="2"  onclick="switchImage(this)"></div>
-                    <div class="dot active" attr="3"  onclick="switchImage(this)"></div>
-                    <div class="dot active" attr="4"  onclick="switchImage(this)"></div>
-                    <div class="dot active" attr="5"  onclick="switchImage(this)"></div>
-
+                    <div class="dot active" attr='0'
+                        onclick="switchImage(this)"></div>
+                    <div class="dot" attr='1' onclick="switchImage(this)"></div>
+                    <div class="dot" attr='2' onclick="switchImage(this)"></div>
+                    <div class="dot" attr='3' onclick="switchImage(this)"></div>
+                    <div class="dot" attr='4' onclick="switchImage(this)"></div>
+                    <div class="dot" attr='5' onclick="switchImage(this)"></div>
                 </div>
+
             </div>
         </section>
         <!-- slider show FIM--> <br>
@@ -160,31 +161,6 @@
                 </div>
             </div>
         </div>
-
     </body>
-    <script type="text/javascript" src="script.js" defer>
-
-        //Acess the Images
-let slideImages = document.querySelectorAll('img');
-//Acess the next and prev buttons
-let next = document.querySelectorAll('.next');
-let prev = document.querySelectorAll('.prev');
-//Acess the indicators
-let dots = document.querySelectorAll('.dot');
-
-var counter = 0;
-
-//Code for next button 
-next.addEventListener('click', slideNext);
-function slideNext() {
-    slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-    if (counter >= slideImages.length - 1) {
-        counter = 0;
-    }
-    else {
-        counter++;
-    }
-    slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-}
-    </script>
+    <script type="text/javascript" src="script.js"></script>
 </html>
