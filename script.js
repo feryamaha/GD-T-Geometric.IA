@@ -34,7 +34,7 @@ function indicators() {
 
 // Function to start the auto sliding
 function autoSliding() {
-    interval = setInterval(slideNext, 3000);
+    interval = setInterval(slideNext, 5000);
 }
 
 // Function to stop the auto sliding
