@@ -143,6 +143,15 @@ header {
         border-right: none;
     }
 
+    .slide-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .slide-container .slides img {
+        object-fit: contain;
+    }
+
 }
 
 @media (max-width: 1024px) {
@@ -228,20 +237,19 @@ header {
 
 .slide-container {
     position: relative;
-    width: 60%;
-    height: 350px;
+    width: 80%;
+    height: 70vh;
     border: 1px solid #000;
     border-radius: 20px;
 }
 
 .slide-container .slides {
     width: 100%;
-    height: calc(100% - 40px);
+    height: calc(100% - 30px);
     position: relative;
     overflow: hidden;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-
 }
 
 .slide-container .slides img {
@@ -259,7 +267,7 @@ header {
 }
 
 span.next, span.prev {
-    position: absolute;
+    /*position: absolute;
     top: 50%;
     transform: translateY(-50%);
     padding: 14px;
@@ -270,7 +278,8 @@ span.next, span.prev {
     border-radius: 3px;
     user-select: none;
     cursor: pointer;
-    z-index: 1;
+    z-index: 1;*/
+    display: none;
 }
 
 span.next {
@@ -347,5 +356,61 @@ span.next:hover, span.prev:hover {
 
     to {
         left: 0%;
+    }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1700px) {
+
+    .slide-container .slides img {
+        object-fit: contain;
+        border-radius: 20px;
+    }
+
+    .slide-container {
+        height: 50vh;
+    }
+
+    .section-banner {
+        min-height: 30vh;
+    }
+}
+
+
+@media only screen and (max-width: 930px) {
+    .slide-container {
+        border: none;
+    }
+
+    .slide-container .slides img {
+        object-fit: contain;
+        border-radius: 20px;
+    }
+
+    .slide-container .slides {
+        height: calc(100% - 5%);
+    }
+
+    .slide-container {
+        height: 200px;
+    }
+
+    .section-banner {
+        min-height: 30vh;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+
+    .section-banner {
+        min-height: 20vh;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+
+    .section-banner {
+        min-height: 5vh;
     }
 }
