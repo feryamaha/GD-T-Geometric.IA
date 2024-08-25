@@ -8,7 +8,6 @@ body {
     background-color: #f0f8ff;
 }
 
-
 header {
     height: auto;
     padding: 5px;
@@ -102,7 +101,6 @@ header {
     margin-bottom: 20px;
     padding: 3%;
     border-radius: 20px;
-
 }
 
 .ptext-controles {
@@ -133,7 +131,6 @@ header {
     color: #555;
 }
 
-
 @media (max-width: 1200px) {
     .text-menu-header {
         font-size: 90%;
@@ -157,7 +154,6 @@ header {
     .slide-container .slides img {
         object-fit: contain;
     }
-
 }
 
 @media (max-width: 1024px) {
@@ -231,7 +227,6 @@ header {
 }
 
 /*  SLIDESHOW  */
-
 .section-banner {
     display: flex;
     width: 100%;
@@ -239,7 +234,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .slide-container {
@@ -373,9 +367,7 @@ span.next:hover, span.prev:hover {
 }
 
 /* Media Queries */
-
 @media only screen and (max-width: 1700px) {
-
     .slide-container .slides img {
         object-fit: contain;
         border-radius: 20px;
@@ -389,7 +381,6 @@ span.next:hover, span.prev:hover {
         min-height: 30vh;
     }
 }
-
 
 @media only screen and (max-width: 930px) {
     .slide-container {
@@ -415,14 +406,12 @@ span.next:hover, span.prev:hover {
 }
 
 @media only screen and (max-width: 620px) {
-
     .section-banner {
         min-height: 20vh;
     }
 }
 
 @media only screen and (max-width: 520px) {
-
     .section-banner {
         min-height: 5vh;
     }
