@@ -1,75 +1,90 @@
+#link-control, .text-menu-header {
+    text-decoration: none
+}
+
+.div-content-scroller, .section-banner, .warraper-menu-header, header {
+    display: flex;
+    display: flex
+}
+
+#img-log, .slide-container {
+    transition: .3s cubic-bezier(.25, .8, .25, 1)
+}
+
+#img-log:hover, .slide-container:hover {
+    box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038
+}
+
+.slide-container .slides, .slide-container .slides img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 body {
-    background-color: #f0f8ff;
+    background-color: #f0f8ff
 }
 
 header {
     height: auto;
     padding: 5px;
-    display: flex;
     align-items: center;
-    align-content: space-between;
+    align-content: space-between
 }
 
 .div-wrapper-logo {
     padding: 10px;
     border-radius: 10px;
-    width: 220px;
+    width: 220px
 }
 
 #logo {
     padding: 2%;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .warraper-menu-header {
     width: 100%;
     height: 100%;
-    display: flex;
     padding: 2%;
     justify-content: end;
-    gap: 5%;
+    gap: 5%
 }
 
 .text-menu-header {
-    text-decoration: none;
     color: #000;
     font-weight: 900;
     letter-spacing: 1.5px;
     font-size: 90%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 5px 12px
 }
 
 .text-menu-header:hover {
     border-bottom: 1px solid #3498db;
-    transition: 1s;
+    transition: 1s
 }
 
 .warraper-secton1 {
     margin-bottom: 5px;
-    overflow: hidden;
+    overflow: hidden
 }
 
 #img-capa {
     width: 100%;
-    background-size: cover;
+    background-size: cover
 }
 
 #img-log {
     width: 40px;
     padding: 1px;
     border-radius: 8px;
-    filter: invert(90%);
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    filter: invert(90%)
 }
 
 #img-log:hover {
@@ -77,8 +92,7 @@ header {
     cursor: pointer;
     border-radius: 8px;
     transform: scale(1.2);
-    filter: contrast(200%);
-    box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
+    filter: contrast(200%)
 }
 
 .div-wrapper-scroller {
@@ -87,153 +101,137 @@ header {
     top: 100%;
     margin-bottom: 1%;
     padding-top: 20px;
-    padding-bottom: 1px;
+    padding-bottom: 1px
 }
 
 .div-content-scroller {
     max-width: 800px;
-    margin: 0 auto;
-    display: flex;
+    margin: 20px auto;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
     padding: 3%;
-    border-radius: 20px;
+    border-radius: 20px
 }
 
 .ptext-controles {
-    padding-top: 0.5%;
+    padding-top: .5%;
     font-size: 20px;
-    color: #000;
+    color: #000
 }
 
-.form-content,
-.orietation-content,
-.profile-content,
-.location-content,
-.runout-content,
-.modifier-content,
-.others-content {
+.form-content, .location-content, .modifier-content, .orietation-content, .others-content, .profile-content, .runout-content {
     padding: 5px;
     border-radius: 8px;
     border-bottom: 1px solid #f0f8ff;
     border-right: 1px solid #f0f8ff;
     background-color: #faf9f6;
-    box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
+    box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038
 }
 
 .htext-legend-icons {
     font-size: 12.5px;
     font-weight: 100;
     margin-bottom: 5px;
-    color: #555;
+    color: #555
 }
 
-@media (max-width: 1200px) {
+@media (max-width:1200px) {
     .text-menu-header {
         font-size: 90%;
-        letter-spacing: 1.5px;
+        letter-spacing: 1.5px
     }
 
     .warraper-menu-header {
-        gap: 3%;
+        gap: 3%
     }
 
     .others-content {
         border-bottom: none;
-        border-right: none;
+        border-right: none
     }
 
     .slide-container {
         width: 100%;
-        height: auto;
+        height: auto
     }
 
     .slide-container .slides img {
-        object-fit: contain;
+        object-fit: contain
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width:1024px) {
     .text-menu-header {
         font-size: 80%;
         letter-spacing: 1.5px;
-        font-weight: 500;
+        font-weight: 500
     }
 
     .warraper-menu-header {
-        gap: 2%;
+        gap: 2%
     }
 }
 
-@media (max-width: 930px) {
+@media (max-width:930px) {
     .text-menu-header {
         font-size: 80%;
         letter-spacing: 1px;
-        font-weight: 500;
+        font-weight: 500
     }
 
     .warraper-menu-header {
-        gap: 1%;
+        gap: 1%
     }
 
     .div-wrapper-logo {
-        width: 200px;
+        width: 200px
     }
 
     #logo {
-        width: 150PX;
+        width: 150PX
     }
 }
 
-@media (max-width: 620px) {
+@media (max-width:620px) {
     .text-menu-header {
         font-size: 70%;
         font-weight: 400;
-        text-align: center;
+        text-align: center
     }
 
     .div-wrapper-logo {
-        width: 200px;
+        width: 200px
     }
 
     #logo {
-        width: 150PX;
+        width: 150PX
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width:520px) {
     .text-menu-header {
         font-size: 60%;
         font-weight: 400;
         padding-left: 5px;
-        padding-right: 5px;
+        padding-right: 5px
     }
 
     .div-wrapper-logo {
         width: 100px;
-        padding-left: 0;
+        padding-left: 0
     }
 
     #logo {
-        width: 100px;
+        width: 100px
     }
 }
 
-#link-control {
-    text-decoration: none;
-}
-
-/*  SLIDESHOW  */
 .section-banner {
-    display: flex;
     width: 100%;
     min-height: 50vh;
-    display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .slide-container {
@@ -242,65 +240,45 @@ header {
     height: 70vh;
     border-radius: 20px;
     box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d;
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-    background-color: #fff;
-}
-
-.slide-container:hover {
-    box-shadow: 0 14px 28px #00000040, 0 10px 10px #00000038;
+    background-color: #fff
 }
 
 .slide-container .slides {
     width: 100%;
     height: calc(100% - 30px);
     position: relative;
-    overflow: hidden;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    overflow: hidden
 }
 
 .slide-container .slides img {
     width: 100%;
     height: 100%;
     position: absolute;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    object-fit: cover
 }
 
 .slide-container .slides img:not(.active) {
     top: 0;
-    left: -100%;
+    left: -100%
 }
 
 span.next, span.prev {
-    /*position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 14px;
-    color: #eee;
-    font-size: 24px;
-    font-weight: bold;*/
-    transition: 0.5s;
-    /*border-radius: 3px;
-    user-select: none;
-    cursor: pointer;
-    z-index: 1;*/
-    display: none;
+    transition: .5s;
+    display: none
 }
 
 span.next {
-    right: 20px;
+    right: 20px
 }
 
 span.prev {
-    left: 20px;
+    left: 20px
 }
 
 span.next:hover, span.prev:hover {
     background-color: #ede6d6;
-    opacity: 0.8;
-    color: #222;
+    opacity: .8;
+    color: #222
 }
 
 .dotsContainer {
@@ -308,31 +286,31 @@ span.next:hover, span.prev:hover {
     bottom: 5px;
     z-index: 3;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%)
 }
 
 .dotsContainer .dot {
     width: 15px;
     height: 15px;
-    margin: 0px 2px;
+    margin: 0 2px;
     border: 3px solid #bbb;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
-    transition: background-color 0.5s ease;
+    transition: background-color .5s
 }
 
 .dotsContainer .active {
-    background-color: #555;
+    background-color: #555
 }
 
 @keyframes next1 {
     from {
-        left: 0%
+        left: 0
     }
 
     to {
-        left: -100%;
+        left: -100%
     }
 }
 
@@ -342,17 +320,17 @@ span.next:hover, span.prev:hover {
     }
 
     to {
-        left: 0%;
+        left: 0
     }
 }
 
 @keyframes prev1 {
     from {
-        left: 0%
+        left: 0
     }
 
     to {
-        left: 100%;
+        left: 100%
     }
 }
 
@@ -362,57 +340,53 @@ span.next:hover, span.prev:hover {
     }
 
     to {
-        left: 0%;
+        left: 0
     }
 }
 
-/* Media Queries */
-@media only screen and (max-width: 1700px) {
+@media only screen and (max-width:1700px) {
     .slide-container .slides img {
         object-fit: contain;
-        border-radius: 20px;
+        border-radius: 20px
     }
 
     .slide-container {
-        height: 50vh;
+        height: 50vh
     }
 
     .section-banner {
-        min-height: 30vh;
+        min-height: 30vh
     }
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width:930px) {
     .slide-container {
         border: none;
+        height: 200px
     }
 
     .slide-container .slides img {
         object-fit: contain;
-        border-radius: 20px;
+        border-radius: 20px
     }
 
     .slide-container .slides {
-        height: calc(100% - 5%);
-    }
-
-    .slide-container {
-        height: 200px;
+        height: calc(100% - 5%)
     }
 
     .section-banner {
-        min-height: 30vh;
+        min-height: 30vh
     }
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:620px) {
     .section-banner {
-        min-height: 20vh;
+        min-height: 20vh
     }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width:520px) {
     .section-banner {
-        min-height: 5vh;
+        min-height: 5vh
     }
 }
